@@ -1,42 +1,155 @@
+html {
+    width: 1336px;
+    height: 768px;
+    min-width: 900px;
+    margin: auto;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: auto;
-    padding: 0 233px 0 233px;
+    background-color: #f4e4e2;
+    margin: 50px 118px 50px 118px;
 }
 
 #banner {
+    margin: auto;
     width: 1100px;
     height: 250px;
-    margin: auto;
+    position: absolute;
+}
+
+#banner img{
+    width: 1100px;
+    height:250px;
+    box-sizing: border-box;
+    border: solid #BA8C63 10px;
+}
+
+#flowers {
+    position: relative;
+}
+
+#flowers * {
+    position: absolute;
+    animation: flowermove 3s alternate infinite;
+}
+
+#flower1 {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#flower2 {
+    margin-left: 180px;
+    margin-top: 110px;
+    animation-delay: 0.5s;
+}
+
+#flower3 {
+    margin-left: 470px;
+    margin-top: 140px;
+    animation-delay: 1s;
+}
+
+#flower4 {
+    margin-left: 440px;
+    margin-top: 155px;
+    animation-delay: 1.2s;
+}
+
+#flower5 {
+    margin-left: 650px;
+    margin-top: 50px;
+    animation-delay: 1.5s;
+}
+
+#flower5 {
+    margin-left: 650px;
+    margin-top: 50px;
+    animation-delay: 2s;
+}
+
+#flower6 {
+    margin-left: 910px;
+    margin-top: 160px;
+    animation-delay: 2.5s;
+}
+
+#flower7 {
+    margin-left: 1030px;
+    margin-top: 110px;
+    animation-delay: 2.8s;
+}
+
+#flower8 {
+    margin-left: 320px;
+    margin-top: 40px;
+    animation-delay: 0.8s;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 header h2 {
     font-weight: 300;
+    margin-bottom: 30px;
 }
 
 main {
     width: 100%;
+    margin-top: 290px;
     display: flex;
     justify-content: space-evenly;
-    margin: auto;
-    border-color: black;
+    position: relative;
 }
 
-section {
+.column1 {
     width: 33%;
-    padding: 25px;
-    margin: 10px;
     background-color: white;
-    border: solid black 1px;
+    padding: 20px 0px 20px 40px;
+    margin: 40px 0 20px 0;
+    border: solid #BA8C63 10px;
+}
+
+.column2 {
+    width: 33%;
+    background-color: white;
+    padding: 20px 0px 20px 40px;
+    margin: 40px 0 20px 60px;
+    border: solid #BA8C63 10px;
+}
+
+.column3 {
+    width: 33%;
+    background-color: white;
+    padding: 20px 0px 20px 40px;
+    margin: 40px 0 20px 60px;
+    border: solid #BA8C63 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+li {
+    padding-bottom: 15px;
 }
 
 footer {
-    width: 100%;
-    margin-bottom: 20px;
     margin-top: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    border: solid black 1px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: solid #BA8C63 10px;
+    padding: 20px 0 10px 0;
+
 }
 
 footer ul {
@@ -46,4 +159,90 @@ footer ul {
 
 footer ul li {
     list-style-type: none;
+}
+
+footer a {
+    color: black;
+    font-weight: 700;
+}
+
+/* Hover Effects */
+
+a:hover {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: #ca786d;
+    text-underline-offset: 3px;
+}
+
+#flowers:hover * {
+    transition: 1s all ease-out;
+    cursor: pointer;
+}
+
+#flower1:hover{
+    width: 120px;
+    height: 120px;
+    margin: -20px;
+}
+
+#flower2:hover{
+    width: 120px;
+    height: 120px;
+}
+
+#flower3:hover{
+    width: 70px;
+    height: 70px;
+}
+
+#flower4:hover{
+    width: 90px;
+    height: 90px;
+}
+
+#flower5:hover{
+    width: 130px;
+    height: 130px;
+}
+
+#flower6:hover{
+    width: 110px;
+    height: 110px;
+}
+
+#flower7:hover{
+    width: 80px;
+    height: 80px;
+}
+
+#flower8:hover{
+    width: 140px;
+    height: 140px;
+}
+
+
+/* Animations */
+
+@keyframes flowermove {
+    0% {
+        transform: rotate(20deg);
+        transition: all 500ms cubic-bezier(0.075, 0.385, 0.755, 1.030);
+    }
+    25% {
+        transform: rotate(70deg);
+        transition: all 500ms cubic-bezier(0.075, 0.385, 0.755, 1.030);
+    }
+    50% {
+        transform: rotate(40deg);
+        transition: all 500ms cubic-bezier(0.075, 0.385, 0.755, 1.030);
+    }
+    75% {
+        transform: rotate(45deg);
+        transition: all 500ms cubic-bezier(0.075, 0.385, 0.755, 1.030);
+    }
+    100% {
+        transform: rotate(0 deg);
+        transition: all 500ms cubic-bezier(0.075, 0.385, 0.755, 1.030);
+    }
 }
