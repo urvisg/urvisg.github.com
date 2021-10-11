@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Let's play with fonts!</h1>
+    <h2>Choose a font to see how it looks.</h2>
+    <script>
+        /*This program lets users play with 6 web safe fonts. User is prompted to choose a font and enter it as a number. Then, the program displays text in the chosen font. Users are also informed of what fonts they did not choose*/
+
+        var fonts = ["Arial", "Verdana", "Times New Roman", "Didot", "Rockwell", "Optima"];
+        var pickFont = prompt("Let's play with fonts. Type a number corrsponding to a font to see how it looks:"+"\n"+"1. Arial"+"\n"+"2. Verdana"+"\n"+"3. Times New Roman"+"\n"+"4. Didot"+"\n"+"5. Rockwell"+"\n"+"6. Optima","");
+        var fontChoice = document.querySelector("h1");
+
+        switch(pickFont){
+            case "1": 
+                fontChoice.style.fontFamily = "Arial";
+                fontChoice.innerHTML = "<h1>My font is Arial</h1>";
+                break;
+            case "2":
+                fontChoice.style.fontFamily = "Verdana";
+                fontChoice.innerHTML = "<h1>My font is Verdana</h1>";
+                break;
+            case "3":
+                fontChoice.style.fontFamily = "Times New Roman";
+                fontChoice.innerHTML = "<h1>My font is Times New Roman</h1>";
+                break;
+            case "4":
+                fontChoice.style.fontFamily = "Didot";
+                fontChoice.innerHTML = "<h1>My font is Didot</h1>";
+                break;
+            case "5":
+                fontChoice.style.fontFamily = "Rockwell";
+                fontChoice.innerHTML = "<h1>My font is Rockwell</h1>";
+                break;
+            case "6":
+                fontChoice.style.fontFamily = "Optima";
+                fontChoice.innerHTML = "<h1>My font is Optima</h1>";
+                break;
+            case null:
+                fontChoice.innerHTML = "<h1>You did not pick a font</h1>";
+                break;
+            case "":
+                fontChoice.innerHTML = "<h1>You did not pick a font</h1>";
+                break;
+        }
+
+        var subText = document.querySelector("h2");
+        var extraText = " ";
+        for(var i=0;i<fonts.length;i++){
+            if(fonts[i] != fonts[pickFont-1]){
+                extraText += `You did not choose ${fonts[i]}. `
+            }
+        }
+        subText.innerHTML = extraText;
+    </script>
+
+</body>
+</html>
