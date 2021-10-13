@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    
+</head>
+<body>
+    <h1>Let's play with fonts!</h1>
+    <h2>Choose a font to see how it looks.</h2>
+    <script>
+        /*This program lets users play with 6 web safe fonts. User is prompted to choose a font and enter it as a number. Then, the program displays text in the chosen font. Users are also informed of what fonts they did not choose. */
+
+        //Setting up body styling
+        var bodyStyle = document.querySelector("body");
+        bodyStyle.style.backgroundColor = "#EEF8F8";
+        bodyStyle.style.textAlign = "center";
+        bodyStyle.style.marginTop = "200px";
+
+        //Initializing variables to use in functions
+        var fonts = ["Arial", "Verdana", "Times New Roman", "Didot", "Rockwell", "Optima"];
+        var pickFont = prompt("Let's play with fonts. Type a number corrsponding to a font to see how it looks:"+"\n"+"1. Arial"+"\n"+"2. Verdana"+"\n"+"3. Times New Roman"+"\n"+"4. Didot"+"\n"+"5. Rockwell"+"\n"+"6. Optima","");
+        var fontChoice = document.querySelector("h1");
+        var subText = document.querySelector("h2");
+        subText.style.margin = "0 200px 0 200px";
+
+        //changeFont changes the h1 to be in the selected font and display font name
+        //returns the font chosen based on the number typed in
+        function changeFont(font, displayFont){
+            switch(font){
+                case "1": 
+                    displayFont.style.fontFamily = "Arial";
+                    displayFont.innerHTML = "<h1>My font is Arial</h1>";
+                    return "Arial";
+                case "2":
+                    displayFont.style.fontFamily = "Verdana";
+                    displayFont.innerHTML = "<h1>My font is Verdana</h1>";
+                    return "Verdana";
+                case "3":
+                    displayFont.style.fontFamily = "Times New Roman";
+                    displayFont.innerHTML = "<h1>My font is Times New Roman</h1>";
+                    return "Times New Roman";
+                case "4":
+                    displayFont.style.fontFamily = "Didot";
+                    displayFont.innerHTML = "<h1>My font is Didot</h1>";
+                    return "Didot";
+                case "5":
+                    displayFont.style.fontFamily = "Rockwell";
+                    displayFont.innerHTML = "<h1>My font is Rockwell</h1>";
+                    return "Rockwell";
+                case "6":
+                    displayFont.style.fontFamily = "Optima";
+                    displayFont.innerHTML = "<h1>My font is Optima</h1>";
+                    return "Optima";
+                case null:
+                    displayFont.innerHTML = "<h1>You did not pick a font</h1>";
+                    break;
+                case "":
+                    displayFont.innerHTML = "<h1>You did not pick a font</h1>";
+                    break;
+            }
+        }
+
+        //notChosen prints what fonts the user did not select in h2
+        //changes h2 to be in chosen font by using font name returned by changeFont()
+        function notChosen(text,newFont){
+            var extraText = " ";
+            for(var i=0;i<fonts.length;i++){
+                if(fonts[i] != fonts[pickFont-1]){
+                    extraText += `You did not choose ${fonts[i]}. `
+                }
+            }
+            subText.innerHTML = extraText;
+            subText.style.fontFamily = newFont;
+        }
+
+        subFont = changeFont(pickFont,fontChoice);
+        notChosen(subText,subFont);
+    </script>
+
+</body>
+</html>
