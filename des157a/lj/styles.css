@@ -103,7 +103,7 @@ footer a{
     font-weight: 700;
 }
 
-footer a:hover {
+a:hover {
     font-style: italic;
     text-decoration: underline;
     text-decoration-color: #ca786d;
