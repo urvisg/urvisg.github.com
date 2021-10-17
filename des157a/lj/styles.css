@@ -30,20 +30,16 @@ h2{
     font-weight: 300;
     font-size: 24px;
     margin-top: -10px;
-    /*margin-bottom: 30px*/
 }
 
 h3 {
     position: absolute;
     top: 40px;
     left: 0;
-    /*width: 25%;*/
     font-family: 'Open Sans';
     font-weight: 600;
     font-size: 16px;
     padding: 20px 40px 20px 90px;
-    /*margin-left : 0;
-    margin-bottom: 70px;*/
     background-color: #f4e4e2;
 }
 
@@ -54,14 +50,10 @@ time {
 }
 
 .response{
-    /*display: flex;
-    justify-content: space-evenly;*/
     column-count: 3;
 }
 
 p{
-    /*width: 45%;*/
-    /*width: 33%;*/
     font-family: 'Open Sans';
     font-weight: 500;
     font-size: 12px;
@@ -72,7 +64,7 @@ p{
 
 a{
     text-decoration: none;
-    color: black;
+    color: #ca786d;
     font-weight: 700;
 }
 
@@ -97,13 +89,14 @@ footer ul li {
 }
 
 footer a{
+    font-family: "Open Sans";
     text-decoration: none;
     font-size: 12px;
     color: black;
     font-weight: 700;
 }
 
-a:hover {
+footer a:hover {
     font-style: italic;
     text-decoration: underline;
     text-decoration-color: #ca786d;
