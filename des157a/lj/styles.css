@@ -1,7 +1,8 @@
 html {
-    position: relative;
+    /* position: relative; */
     width: 1336px;
     height: 768px;
+    overflow-x: hidden;
 }
 
 body{
@@ -33,14 +34,38 @@ h2{
 }
 
 h3 {
-    position: absolute;
+    /* position: absolute;
     top: 40px;
-    left: 0;
+    left: 0; */
     font-family: 'Open Sans';
     font-weight: 600;
     font-size: 16px;
     padding: 20px 40px 20px 90px;
     background-color: #f4e4e2;
+}
+
+/* .one{
+    position: relative;
+}
+
+.two{
+    position: relative;
+} */
+
+.one h3{
+    position: absolute;
+    top: 768px;
+    left: 0;
+}
+
+.two h3{
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+.two{
+    margin-bottom: 50px;
 }
 
 time {
@@ -71,8 +96,7 @@ a{
 footer{
     position: absolute;
     left: 0;
-    bottom: 0;
-    width: 1336px;
+    width: 100%;
     margin-top: 30px;
     background-color: #f4e4e2;
     padding: 7px 0 7px 0;
