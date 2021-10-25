@@ -1,0 +1,206 @@
+html{
+    width: 1366px;
+    height: 768px;
+}
+
+body{
+    font-family: 'Inconsolata';
+    /* display: flex; */
+    margin: 45px 100px 0px 100px;
+    display: grid;
+    grid-template-columns: (2,1fr);
+    background-image: url("images/inputscreen.png");
+    background-repeat: no-repeat;
+}
+
+header{
+    margin-top: -20px;
+    grid-column: 1/2;
+    margin-right: 60px;
+}
+
+main{
+    grid-column: 2/3;
+    /* width: 400px;
+    height: 600px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 50px 10px 50px;
+    margin:20px 0 0 60px; */
+    background-color: black;
+    color: white;
+    padding: 10px 50px 30px 50px;
+    /* margin: 20px 0 0 60px; */
+    border-radius: 20px;
+    margin: auto;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,.25));
+}
+
+.formfill{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 45px;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 24px;
+    width: 500px;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+footer {
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+    background-color: white;
+    padding: 20px 0 0 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: underline;
+    color: black;
+    font-weight: 700;
+}
+
+#madlib {
+    font-size: 12px;
+}
+
+/* Form Customization */
+
+label, input{
+    display: block;
+}
+
+label{
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+input{
+    margin-bottom: 10px;
+    width: 300px;
+    height: 25px;
+}
+
+.admission{
+    width: 176px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.reset {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* Overlay */
+
+#overlay{
+    position: absolute;
+    background: url('images/lights.png'), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 73%);;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 1366px;
+    height: 768px;
+    text-align: center;
+}
+
+#overlay button{
+    background: none;
+    border: #39FF14 3px solid;
+    color: #39FF14;
+    font-weight: 700;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+#overlay h2{
+    font-weight: 600;
+    margin: auto;
+}
+
+#overlay h3{
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#overlay > article{
+    width: 1028px;
+    height: 450px;
+    background-color: #FFFFEA;
+    border: 20px solid black;
+    margin: auto;
+    margin-top: 70px;
+    padding: 40px 10px 40px 10px;
+}
+
+#overlay article section{
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    padding: 10px 30px 10px 30px;
+}
+
+span{
+    color: red;
+    font-weight: 800;
+}
+
+p {
+    padding-top: 300px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5em;
+    animation: scroll-up 60s linear;
+    animation-iteration-count: infinite;
+}
+
+p:hover{
+    animation-play-state: paused;
+}
+
+/* Scroll Animations */
+
+@keyframes scroll-up{
+    to{
+        transform: translateY(-100%);
+    }
+}

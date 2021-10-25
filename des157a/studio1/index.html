@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Mad Libs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Lights, Camera, Action!</h1>
+        <h2>Create a fun Mad Libs story about a night at the movies...</h2>
+    </header>
+    <main>
+        <section class="formfill">
+            <h3>Fill in the Blanks</h3>
+            <form id="myform">
+                <label for="moviename">Movie Name</label>
+                <input type="text" id="moviename" required>
+
+                <label for="food">Food</label>
+                <input type="text" id="food" required>
+
+                <label for="noise">Noise</label>
+                <input type="text" id="noise" required>
+
+                <label for="verb">Verb</label>
+                <input type="text" id="verb" required>
+
+                <label for="emotion1">Emotion</label>
+                <input type="text" id="emotion1" required>
+
+                <label for="bodypart">Body Part</label>
+                <input type="text" id="bodypart" required>
+
+                <label for="emotion2">Another Emotion</label>
+                <input type="text" id="emotion2" required>
+                
+                <input class="admission" type="image" src="images/submitbutton.png" value="Send">
+                <!-- <input class="reset" type="reset" value="Reset"> -->
+            </form>
+        </section>
+        <article id="madlib"></article>
+    </main>
+    <section id="overlay" class="hidden">
+        <article>
+            <h2>Now Premiering:</h2>
+            <h3 class='movietitle'></h3>
+            <section>
+                <p></p>
+            </section>
+        </article>
+        <button class="playagain">PLAY AGAIN</button>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="https://validator.w3.org/check?uri=https://urvisg.github.io/des157a/lj">Valid HTML 5</a></li>
+            <li><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
