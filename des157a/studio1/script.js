@@ -7,7 +7,6 @@
 
 
     myForm.addEventListener('submit', function(event) {
-        console.log("start");
         event.preventDefault();
         let movieName = document.querySelector('#moviename').value;
         let food = document.querySelector('#food').value;
@@ -38,7 +37,6 @@
                 document.getElementById('overlay').className = 'hidden';
                 let formData = document.querySelectorAll("input[type=text]");
                 for (let eachField of formData) {
-                    console.log("in");
                     eachField.value = "";
                 }
             });
