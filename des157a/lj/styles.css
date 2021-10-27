@@ -33,9 +33,6 @@ h2{
 }
 
 h3 {
-    /* position: absolute;
-    top: 40px;
-    left: 0; */
     font-family: 'Open Sans';
     font-weight: 600;
     font-size: 16px;
@@ -43,27 +40,33 @@ h3 {
     background-color: #f4e4e2;
 }
 
-/* .one{
-    position: relative;
-}
-
-.two{
-    position: relative;
-} */
-
 .one h3{
     position: absolute;
-    top: 768px;
+    top: 1440px;
     left: 0;
 }
 
 .two h3{
     position: absolute;
+    top: 670px;
+    left: 0;
+}
+
+.three h3{
+    position: absolute;
     top: 40px;
     left: 0;
 }
 
+.one{
+    margin-bottom: 30px;
+}
+
 .two{
+    margin-bottom: 50px;
+}
+
+.three{
     margin-bottom: 50px;
 }
 
