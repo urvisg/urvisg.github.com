@@ -40,19 +40,34 @@ h3 {
     background-color: #f4e4e2;
 }
 
+h4{
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+h4:first-of-type{
+    margin-top: 0;
+}
+
 .one h3{
     position: absolute;
-    top: 1435px;
+    top: 2400px;
     left: 0;
 }
 
 .two h3{
     position: absolute;
-    top: 670px;
+    top: 1640px;
     left: 0;
 }
 
 .three h3{
+    position: absolute;
+    top: 1010px;
+    left: 0;
+}
+
+.four h3{
     position: absolute;
     top: 40px;
     left: 0;
@@ -68,6 +83,15 @@ h3 {
 
 .three{
     margin-bottom: 50px;
+}
+
+.everypicimages{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 100px 0 100px;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 time {
