@@ -19,24 +19,13 @@
         const yPos = event.clientY;
         const changeRotation = Math.floor(yPos / heightDegree);
 
-        // Changing the angle based on the y coordinates
-        if(yPos < heightDegree){
-            theImg.style.transform = 'rotate(-3deg)';
-        }
-        else if(yPos < heightDegree * 2){
-            theImg.style.transform = 'rotate(0deg)';
-        }
-        else if(yPos > heightDegree * 2){
-            theImg.style.transform = 'rotate(3deg)';
-        }
-
-        // Changing the photos based on x coordinates
-
+        // Changing the images based on x coordinates
         if(changePhoto !== prevXLoc){
             theImg.src = `images/img${changePhoto + 1}.png`;
             prevXLoc = changePhoto;
         }
 
+        // Text alongside image changes as photo changes
         if(changePhoto + 1 == 1){
             text.innerHTML = "<b>Day:</b> Monday <br> <b>Date:</b> October 10, 2019 <br> <b>Note:</b> I didn't like this shirt at first but it ended up becoming one of my favorite shirts. I would wear a thermal shirt underneath so that I could wear it in that transition weather between summer and fall.";
         }
@@ -51,6 +40,17 @@
         }
         else if(changePhoto + 1 == 5){
             text.innerHTML = "<b>Day:</b> Friday <br> <b>Date:</b> January 6, 2020 <br> <b>Note:</b> I bought this jacket and earrings during winter break. I decided to wear them on my first day of classes. I remember that I had ECS 32A that day and I was feeling nervous.";
+        }
+
+        // Changing the angle of the image based on the y coordinates
+        if(yPos < heightDegree){
+            theImg.style.transform = 'rotate(-3deg)';
+        }
+        else if(yPos < heightDegree * 2){
+            theImg.style.transform = 'rotate(0deg)';
+        }
+        else if(yPos > heightDegree * 2){
+            theImg.style.transform = 'rotate(3deg)';
         }
     }
 }());
