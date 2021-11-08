@@ -51,23 +51,29 @@ h4:first-of-type{
 
 .one h3{
     position: absolute;
-    top: 2400px;
+    top: 3070px;
     left: 0;
 }
 
 .two h3{
     position: absolute;
-    top: 1640px;
+    top: 2310px;
     left: 0;
 }
 
 .three h3{
     position: absolute;
-    top: 1010px;
+    top: 1680px;
     left: 0;
 }
 
 .four h3{
+    position: absolute;
+    top: 660px;
+    left: 0;
+}
+
+.five h3{
     position: absolute;
     top: 40px;
     left: 0;
@@ -82,6 +88,10 @@ h4:first-of-type{
 }
 
 .three{
+    margin-bottom: 50px;
+}
+
+.four{
     margin-bottom: 50px;
 }
 
