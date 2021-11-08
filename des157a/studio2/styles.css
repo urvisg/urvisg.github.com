@@ -1,0 +1,87 @@
+html{
+    height: 768px;
+    width: 1366px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mali';
+    text-align: center;
+    margin: auto;
+    background-image: repeating-linear-gradient(#fdfd96 0px, #fdfd96 45px, teal 46px);
+    position: relative;
+}
+
+.heading{
+    margin-top: 30px;
+}
+
+h1{
+    font-family: 'Chicle';
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+.sketch{
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+.closet{
+    width: 325px;
+    height: 500px;
+    margin-left: -30px;
+}
+
+.closet img{
+    margin: auto;
+}
+
+.note{
+    width: 650px;
+    height: 400px;
+    margin-top: 37px;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+p{
+    text-align: left;
+    font-size: 24px;
+    line-height: 2em;
+}
+
+b{
+    font-size: 28px;
+    color: #8A2BE2;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    list-style-type: none;
+    margin-right: -250px;
+    margin-left: -250px;
+}
+
+a{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 3px;
+    text-decoration-color: #e03fd8;
+    font-weight: 500;
+}
