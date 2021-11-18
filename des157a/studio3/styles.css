@@ -1,0 +1,87 @@
+html{
+    width: 1366px;
+    height: 768px;
+    background-image: url(images/grass.png);
+}
+
+body {
+    font-family: 'Kanit';
+    padding: 50px;
+    line-height: 1.5em;
+    text-align:center;
+}
+
+h1{
+    margin: 0;
+    font-family: 'Road Rage';
+    font-size: 56px;
+    padding: 0 540px 0 540px;
+    line-height: 1em;
+}
+
+h2{
+    font-size: 16px;
+    display: inline-block;
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 120px;
+    left: 720px;
+}
+
+h3{
+    font-size: 24px;
+    color: white;
+}
+
+h4{
+    font-size: 48px;
+    margin: 40px;
+}
+
+p{
+    font-size: 16px;
+    color: white;
+    padding: 0 300px 0 300px;
+    margin-top: 50px;
+    line-height: 1.5em;
+}
+
+#score{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px 0 100px;
+}
+
+button { 
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    margin-top: 100px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: #800000;
+    cursor: pointer;
+}
+
+div {
+    padding: 20px;
+}
+
+/* #gamecontrol, #score {
+    background-color: aliceblue;
+}
+
+#game {
+    background-color:#eaeaea;
+}
+#actions {
+    background-color: silver;
+} */
