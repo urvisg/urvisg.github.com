@@ -11,8 +11,9 @@
     let para = document.querySelectorAll('p');
     let arrows = document.getElementById('arrows');
 
+    //Audio files
     const bark = new Audio('media/bark.mp4');
-    // let instructions = document.getElementById('instructions');
+
 
     var gameData = {
         dice: ['images/1die.png','images/2die.png','images/3die.png','images/4die.png','images/5die.png','images/6die.png'],
@@ -40,22 +41,19 @@
         console.log("Player: "+gameData.player);
 
 
-        //add in dog visuals
-        // display.innerHTML += '<img id="bar" src="images/bar.png"> <img id="bar" src="images/bar.png">';
+        //add in dog and score visuals
         score.innerHTML += '<section id="rancho"> <h3>Rancho</h3> <img id="dogs" src="images/rancho.png"><h4></h4><div id="actions1"></div></section>';
         score.innerHTML += '<section id="dice"></section>';
         score.innerHTML += '<section id="bella"> <h3>Bella</h3> <img id="dogs" src="images/bella.png"><h4></h4><div id="actions2"></div></section>';
         document.querySelectorAll('h4')[0].innerHTML = `${gameData.score[0]}`;
         document.querySelectorAll('h4')[1].innerHTML = `${gameData.score[1]}`;
-        // document.getElementById('bar').style.padding = "0 0 50px 0";
-        console.log("index "+gameData.index);
 
         //add event listener for new button
-        // gameControl.innerHTML = '<h2>The Game Has Started</h2>';
         gameControl.innerHTML = "";
         document.getElementById('qbuttons').innerHTML = '<button id="quit">Wanna Quit?</button>';
         document.getElementById('qbuttons').querySelector('button').style.backgroundColor = 'grey';
         document.getElementById('qbuttons').querySelector('button').style.color = 'black';
+        document.getElementById('qbuttons').style.bottom = '40px';
 
         document.getElementById('qbuttons').querySelector('button').addEventListener('mouseover',function(){
             document.getElementById('qbuttons').querySelector('button').style.backgroundColor = 'lightgrey';
@@ -73,14 +71,12 @@
     });
 
     function setUpTurn(){
-        // game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-        // actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
-        console.log(gameData.index);
+        //add arrows to signify player turn
         if(gameData.index == 0){
             console.log("in");
             document.getElementById("actions1").innerHTML = '<button id="roll">Roll the Dice</button>';
             document.getElementById("arrows").innerHTML = '<img src="images/arrowright.png" alt="arrow">';
-            document.getElementById("arrows").style.left = "50px";
+            document.getElementById("arrows").style.left = "70px";
         }
         else if(gameData.index == 1){
             console.log("in");
@@ -97,7 +93,6 @@
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
-        // game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         document.getElementById('dice').innerHTML = `<img src="${gameData.dice[gameData.roll1-1]}"> <img src="${gameData.dice[gameData.roll2-1]}">`;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
@@ -132,7 +127,6 @@
         //if neither die is a 1...
         else{
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-            // actionArea.innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
             if(gameData.index == 0){
                 document.getElementById("actions1").innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
             }
@@ -152,7 +146,7 @@
 
     function checkWinningCondition(){
         if(gameData.score[gameData.index] > gameData.gameEnd){
-            // score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            //check if turn matches player and play audio accordingly to signify outcome
             if(gameData.index == gameData.player){
                 score.innerHTML = `<p>You helped ${gameData.players[gameData.player]} win the race!</p>`;
                 console.log(gameData.score[gameData.index]);
@@ -173,20 +167,17 @@
             }
             
             document.getElementById('arrows').innerHTML = "";
-            //score.innerHTML = `<p>${gameData.players[gameData.index]} wins the game!</p>`;
             score.querySelector('p').style.fontSize = "36px";
             score.style.display = 'block';
-            // if(gameData.index == 0){
-            //     score.innerHTML += '<img src="images/rancho.png" alt="rancho">';
-            // }else{
-            //     score.innerHTML += '<img src="images/bella.png" alt="rancho">';
-            // }
 
             actionArea.innerHTML = '';
+
+            //Start a new game button invoke and styling
             document.getElementById('quit').innerHTML = "Start a New Game?";
             document.getElementById('quit').style.backgroundColor = "red";
             document.getElementById('quit').style.color = "white";
-            document.getElementById('quit').style.marginBottom = '150px';
+            document.getElementById('quit').style.bottom = '0';
+            document.getElementById('quit').style.marginBottom = '90px';
             document.getElementById('quit').addEventListener('mouseover',function(){
                 document.getElementById('quit').style.backgroundColor = "#800000";
             })
@@ -200,7 +191,6 @@
     }
 
     function showCurrentScore(){
-        // score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]} ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} ${gameData.score[1]}</strong></p>`;
         document.querySelectorAll('h4')[0].innerHTML = `${gameData.score[0]}`;
         document.querySelectorAll('h4')[1].innerHTML = `${gameData.score[1]}`;
     }
