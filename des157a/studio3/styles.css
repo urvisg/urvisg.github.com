@@ -2,21 +2,26 @@ html{
     width: 1366px;
     height: 768px;
     background-image: url(images/grass.png);
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 body {
     font-family: 'Kanit';
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     line-height: 1.5em;
     text-align:center;
+    color: white;
 }
 
 h1{
     margin: 0;
     font-family: 'Road Rage';
     font-size: 56px;
-    padding: 0 540px 0 540px;
+    padding: 50px 540px 0 540px;
     line-height: 1em;
+    color: black;
 }
 
 h2{
@@ -50,10 +55,20 @@ p{
     line-height: 1.5em;
 }
 
+#dice p{
+    padding: 0 60px 0 60px;
+    margin: 0px;
+}
+
+#dice img{
+    padding-top: 100px;
+}
+
 #score{
     display: flex;
     justify-content: space-between;
     padding: 0 100px 0 100px;
+    color: black;
 }
 
 button { 
@@ -75,6 +90,68 @@ div {
     padding: 20px;
 }
 
+#rancho{
+    /* padding: 50px; */
+    width: 404px;
+    height: 500px;
+}
+
+#bella{
+    /* padding: 50px; */
+    width: 404px;
+    height: 500px;
+}
+
+#dice{
+    width: 404px;
+    height: 500px;
+}
+
+#qbuttons{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#arrows{
+    position: absolute;
+    padding: 0;
+    top: 250px;
+    /* left: 50px;
+    top: 300px; */
+}
+
+#arrows img{
+    top: 100px;
+}
+
+#actions1 button{
+    margin-top: 50px;
+}
+
+#actions2 button{
+    margin-top: 50px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    list-style-type: none;
+    margin-right: -250px;
+    margin-left: -250px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    /* text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
+    font-weight: 500;
+}
 /* #gamecontrol, #score {
     background-color: aliceblue;
 }
