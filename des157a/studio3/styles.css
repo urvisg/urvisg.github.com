@@ -92,13 +92,11 @@ div {
 }
 
 #rancho{
-    /* padding: 50px; */
     width: 404px;
     height: 500px;
 }
 
 #bella{
-    /* padding: 50px; */
     width: 404px;
     height: 500px;
 }
@@ -114,7 +112,6 @@ div {
 
 #qbuttons{
     position: absolute;
-    /* bottom: 20px; */
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -123,8 +120,6 @@ div {
     position: absolute;
     padding: 0;
     top: 250px;
-    /* left: 50px;
-    top: 300px; */
 }
 
 #arrows img{
@@ -162,15 +157,5 @@ a{
     text-decoration: none;
     color: white;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    /* text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; */
     font-weight: 500;
 }
-/* #gamecontrol, #score {
-    background-color: aliceblue;
-}
-#game {
-    background-color:#eaeaea;
-}
-#actions {
-    background-color: silver;
-} */
