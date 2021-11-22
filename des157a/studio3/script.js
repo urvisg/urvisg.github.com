@@ -73,14 +73,14 @@
     function setUpTurn(){
         //add arrows to signify player turn
         if(gameData.index == 0){
-            document.getElementById("actions1").innerHTML = '<button id="roll">Roll the Dice</button>';
-            document.getElementById("arrows").innerHTML = '<img src="images/arrowright.png" alt="arrow">';
-            document.getElementById("arrows").style.left = "70px";
+            document.getElementById('actions1').innerHTML = '<button id="roll">Roll the Dice</button>';
+            document.getElementById('arrows').innerHTML = '<img src="images/arrowright.png" alt="arrow">';
+            document.getElementById('arrows').style.left = "70px";
         }
         else if(gameData.index == 1){
-            document.getElementById("actions2").innerHTML = '<button id="roll">Roll the Dice</button>';
-            document.getElementById("arrows").innerHTML = '<img src="images/arrowleft.png" alt="arrow">';
-            document.getElementById("arrows").style.left = "1170px";
+            document.getElementById('actions2').innerHTML = '<button id="roll">Roll the Dice</button>';
+            document.getElementById('arrows').innerHTML = '<img src="images/arrowleft.png" alt="arrow">';
+            document.getElementById('arrows').style.left = "1170px";
         }
         document.getElementById('roll').addEventListener('click',function(){
             throwDice();
@@ -101,10 +101,10 @@
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             if(gameData.index == 1){
-                document.getElementById("actions1").innerHTML = "";
+                document.getElementById('actions1').innerHTML = "";
             }
             else if(gameData.index == 0){
-                document.getElementById("actions2").innerHTML = "";
+                document.getElementById('actions2').innerHTML = "";
             }
             showCurrentScore();
             setTimeout(setUpTurn, 2000);
@@ -114,10 +114,10 @@
         else if(gameData.roll1 == 1 || gameData.roll2 == 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             if(gameData.index == 1){
-                document.getElementById("actions1").innerHTML = "";
+                document.getElementById('actions1').innerHTML = "";
             }
             else if(gameData.index == 0){
-                document.getElementById("actions2").innerHTML = "";
+                document.getElementById('actions2').innerHTML = "";
             }
             document.getElementById('dice').innerHTML += `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
@@ -127,10 +127,10 @@
         else{
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             if(gameData.index == 0){
-                document.getElementById("actions1").innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
+                document.getElementById('actions1').innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
             }
             else if(gameData.index == 1){
-                document.getElementById("actions2").innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
+                document.getElementById('actions2').innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
             }
             document.getElementById('rollagain').addEventListener('click',function(){
                 setUpTurn();
@@ -171,16 +171,16 @@
             actionArea.innerHTML = '';
 
             //Start a new game button invoke and styling
-            document.getElementById('quit').innerHTML = "Start a New Game?";
-            document.getElementById('quit').style.backgroundColor = "red";
-            document.getElementById('quit').style.color = "white";
+            document.getElementById('quit').innerHTML = 'Start a New Game?';
+            document.getElementById('quit').style.backgroundColor = 'red';
+            document.getElementById('quit').style.color = 'white';
             document.getElementById('quit').style.bottom = '0';
             document.getElementById('quit').style.marginBottom = '90px';
             document.getElementById('quit').addEventListener('mouseover',function(){
-                document.getElementById('quit').style.backgroundColor = "#800000";
+                document.getElementById('quit').style.backgroundColor = '#800000';
             })
             document.getElementById('quit').addEventListener('mouseout',function(){
-                document.getElementById('quit').style.backgroundColor = "red";
+                document.getElementById('quit').style.backgroundColor = 'red';
             })
         }
         else{
