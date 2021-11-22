@@ -13,6 +13,8 @@
 
     //Audio files
     const bark = new Audio('media/bark.mp4');
+    const treats = new Audio('media/treatshake.mp3');
+    const growl = new Audio('media/growl.mp3');
 
 
     var gameData = {
@@ -36,9 +38,7 @@
 
         //randomly setting game index
         gameData.index = Math.round(Math.random());
-        console.log(gameData.index);
         gameData.player = gameData.index;
-        console.log("Player: "+gameData.player);
 
 
         //add in dog and score visuals
@@ -73,13 +73,11 @@
     function setUpTurn(){
         //add arrows to signify player turn
         if(gameData.index == 0){
-            console.log("in");
             document.getElementById("actions1").innerHTML = '<button id="roll">Roll the Dice</button>';
             document.getElementById("arrows").innerHTML = '<img src="images/arrowright.png" alt="arrow">';
             document.getElementById("arrows").style.left = "70px";
         }
         else if(gameData.index == 1){
-            console.log("in");
             document.getElementById("actions2").innerHTML = '<button id="roll">Roll the Dice</button>';
             document.getElementById("arrows").innerHTML = '<img src="images/arrowleft.png" alt="arrow">';
             document.getElementById("arrows").style.left = "1170px";
@@ -90,6 +88,7 @@
     }
 
     function throwDice(){
+
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
@@ -149,7 +148,6 @@
             //check if turn matches player and play audio accordingly to signify outcome
             if(gameData.index == gameData.player){
                 score.innerHTML = `<p>You helped ${gameData.players[gameData.player]} win the race!</p>`;
-                console.log(gameData.score[gameData.index]);
                 if(gameData.player == 0){
                     score.innerHTML += '<img src="images/rancho.png" alt="rancho">';
                 }else{
@@ -158,12 +156,12 @@
                 bark.play();
             }else{
                 score.innerHTML = `<p>Oh no! You and ${gameData.players[gameData.player]} lost the race!</p>`;
-                console.log(gameData.score[gameData.index]);
                 if(gameData.player == 0){
                     score.innerHTML += '<img src="images/rancho.png" alt="rancho">';
                 }else{
                     score.innerHTML += '<img src="images/bella.png" alt="bella">';
                 }
+                growl.play();
             }
             
             document.getElementById('arrows').innerHTML = "";
@@ -186,6 +184,9 @@
             })
         }
         else{
+            //audio of treat shaking noise used as dice roll
+            treats.play();
+
             showCurrentScore();
         }
     }
