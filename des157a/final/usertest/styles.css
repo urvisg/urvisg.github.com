@@ -70,7 +70,6 @@ button:hover{
 #cards{
     padding: 0;
     margin: 0;
-    /* margin-top: 120px; */
 }
 
 footer {
@@ -103,29 +102,23 @@ footer a {
 @keyframes flip {
     0% {
         transform: rotateY(0deg);
-        /* background-image: url("images/smile.jpg"); */
     }
     50% {
         transform: rotateY(-90deg);
-        /* background-image: url("images/blank.jpg"); */
     }
     100% {
         transform: rotateY(-180deg);
-        /* background-image: url("images/frown.jpg") */
     }
 }
 
 @keyframes flipBack {
     0% {
         transform: rotateY(-180deg);
-        /* background-image: url("images/smile.jpg"); */
     }
     50% {
         transform: rotateY(-90deg);
-        /* background-image: url("images/blank.jpg"); */
     }
     100% {
         transform: rotateY(0deg);
-        /* background-image: url("images/frown.jpg") */
     }
 }
