@@ -29,6 +29,10 @@
     let flippedCards = [];
     let check;
 
+    //audio files
+    const flip = new Audio('media/flip.mp4');
+    const bark = new Audio('media/bark.mp4');
+
 
     //click to start
     play.addEventListener('click',function(){
@@ -42,6 +46,7 @@
         for(let i=0;i<3;i++){
             cards.innerHTML += "<div class='row'></div>"
         }
+
         setUpCards();
 
         displayBar();
@@ -84,28 +89,29 @@
             for(let j = 0;j < 4;j++){
                 if(i==0){
                     if(matches1[j].includes('.png')){
-                        rows[i].innerHTML += `<div class='card'> <img class='back' src='images/${matches1[j]}'> <p class='front'>?</p></div>`;
+                        rows[i].innerHTML += `<div class='card'> <img class='back' src='images/${matches1[j]}'> <img class='front' src='images/cardtop.png' alt='cardtop'></div>`;
                     }else{
-                        rows[i].innerHTML += `<div class='card'> <p class='back'>${matches1[j]}</p> <p class='front'>?</p></div>`;
+                        rows[i].innerHTML += `<div class='card'> <p class='back'>${matches1[j]}</p> <img class='front' src='images/cardtop.png' alt='cardtop'></div>`;
                     }
                 }
                 else if(i==1){
                     if(matches2[j].includes('.png')){
-                        rows[i].innerHTML += `<div class='card'> <img class='back' src='images/${matches2[j]}'> <p class='front'>?</p></div>`;
+                        rows[i].innerHTML += `<div class='card'> <img class='back' src='images/${matches2[j]}'> <img class='front' src='images/cardtop.png' alt='cardtop'></div>`;
                     }else{
-                        rows[i].innerHTML += `<div class='card'> <p class='back'>${matches2[j]}</p> <p class='front'>?</p></div>`;
+                        rows[i].innerHTML += `<div class='card'> <p class='back'>${matches2[j]}</p> <img class='front' src='images/cardtop.png' alt='cardtop'></div>`;
                     }
                 }
                 else{
                     if(matches3[j].includes('.png')){
-                        rows[i].innerHTML += `<div class='card'> <img class='back' src='images/${matches3[j]}'> <p class='front'>?</p></div>`;
+                        rows[i].innerHTML += `<div class='card'> <img class='back' src='images/${matches3[j]}'> <img class='front' src='images/cardtop.png' alt='cardtop'></div>`;
                     }else{
-                        rows[i].innerHTML += `<div class='card'> <p class='back'>${matches3[j]}</p> <p class='front'>?</p></div>`;
+                        rows[i].innerHTML += `<div class='card'> <p class='back'>${matches3[j]}</p> <img class='front' src='images/cardtop.png' alt='cardtop'></div>`;
                     }
                 }
             }
         }
 
+        //styling rows for display
         rows[0].style.display = 'flex';
         rows[0].style.justifyContent = 'center';
         rows[1].style.display = 'flex';
@@ -113,6 +119,7 @@
         rows[2].style.display = 'flex';
         rows[2].style.justifyContent = 'center';
 
+        //styling cards
         for(let i=0;i<card.length;i++){
             card[i].style.width = '142px';
             card[i].style.height = '170px';
@@ -122,20 +129,36 @@
             card[i].style.borderRadius = '10px';
         }
 
+        //styling front and back faces of the cards
         for(let i=0;i<front.length;i++){
             front[i].style.margin = '0';
             back[i].style.margin = '0';
             front[i].style.position = 'absolute';
             back[i].style.position = 'absolute';
+            front[i].style.top = '50%';
+            front[i].style.left = '50%';
+            front[i].style.transform = 'translate(-50%, -50%)';
+            if(back[i].tagName == 'P'){
+                back[i].style.textAlign = 'center';
+                back[i].style.top = '65px';
+                back[i].style.left = '45px';
+                back[i].style.transform = 'translate(-50%, -50%)';
+            }else{
+                back[i].style.top = '40px';
+                back[i].style.left = '20px';
+                back[i].style.transform = 'translate(-50%, -50%)';
+            }
             back[i].style.visibility = 'hidden';
         }
     }
 
+    //function to flip cards
     function flipCard(i){
         //when card is clicked
         card[i].addEventListener('click',function(){
             //if less than 2 cards are flipped, then flip open
             if(flipped < 2){
+                flip.play();
                 card[i].style.animation = 'flip 500ms forwards';
                 card[i].style.animationIterationCount = '1';
                 flipped += 1;
@@ -151,9 +174,9 @@
                 flipped = 0;
                 check = checkCards(flippedCards);
                 clicks += 1;
-                console.log(clicks);
                 if(check == false){
                     let delay = setTimeout(function(){
+                        flip.play();
                         for(let c = 0;c < flippedCards.length;c++){
                             if(c > 1){
                                 break;
@@ -165,7 +188,6 @@
                                 front[flippedCards[index - c]].style.visibility = 'visible';
                                 back[flippedCards[index - c]].style.visibility = 'hidden';
                             },250);
-
                         }
                     },1200);
                 }
@@ -175,7 +197,6 @@
 
     //check if the two cards flipped are a match
     function checkCards(flippedCards){
-        console.log(flippedCards);
         let flip1 = back[flippedCards[flippedCards.length - 1]];
         let flip2 = back[flippedCards[flippedCards.length - 2]];
         let card1,card2;
@@ -185,7 +206,6 @@
             card2 = flip2.textContent.toLowerCase();
             if(card1 == card2){
                 matchnum++;
-                console.log("matchnum: "+matchnum);
                 return true;
             }else{
                 return false;
@@ -196,7 +216,6 @@
             card2 = flip1.textContent.toLowerCase();
             if(card1 == card2){
                 matchnum++;
-                console.log("matchnum: "+matchnum);
                 return true;
             }else{
                 return false;
@@ -216,15 +235,12 @@
         let game = setInterval(function(){
             score.innerHTML = `<p><b>Failed Matches: ${clicks}</b></p>`;
             time --;
-            console.log("time: "+time);
 
             //display time or shift to end screen if times is up
             if(time == -1){
-                console.log("time: "+time);
                 clearInterval(game);
                 endGame();
             }else if(matchnum == 6){
-                console.log("matchnum: "+matchnum);
                 clearInterval(game);
                 endGame();
             }else if(time < 10){
@@ -250,8 +266,9 @@
         },1000);
     }
 
-    //displa end screen if time is up with custom message and reward based on performance
+    //display end screen if time is up with custom message and reward based on performance
     function endGame(){
+        bark.play();
         let delay = setTimeout(function(){
             right.innerHTML = "";
             play.innerHTML = "Play Again";
@@ -270,13 +287,10 @@
 
             //display different reward photo based on number of failed matches
             if(6 <= clicks && clicks<= 10){
-                console.log('clicks: '+clicks);
                 right.innerHTML += "<img src='images/tier1.png' alt='rancho sleeping'>";
             }else if(11 <= clicks && clicks <= 15){
-                console.log('clicks: '+clicks);
                 right.innerHTML += "<img src='images/tier2.png' alt='sitting rancho'>";
             }else{
-                console.log('clicks: '+clicks);
                 right.innerHTML += "<img src='images/tier3.png' alt='fall rancho'>";
             }
 
