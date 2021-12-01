@@ -339,6 +339,7 @@
             right.innerHTML = "";
             play.innerHTML = "Play Again";
             play.style.backgroundColor = "#FFE600";
+            play.style.marginBottom = "93px";
             play.addEventListener('click',function(){
                 location.reload();
             });
