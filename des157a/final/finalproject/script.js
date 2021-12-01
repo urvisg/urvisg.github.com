@@ -335,7 +335,6 @@
     //display end screen if time is up with custom message and reward based on performance
     function endGame(){
         bark.play();
-        left.style.width = "33%";
         let delay = setTimeout(function(){
             right.innerHTML = "";
             play.innerHTML = "Play Again";
