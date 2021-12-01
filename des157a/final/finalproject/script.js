@@ -31,7 +31,7 @@
     let check;
 
     //audio files
-    const flip = new Audio('media/flip.mp4');
+    const flip = new Audio('media/flip.mp3');
     const bark = new Audio('media/bark.mp4');
     const correct = new Audio('media/correct.mp3');
     const wrong = new Audio('media/wrong.mp3');
