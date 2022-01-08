@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d6c7b6;
+    color: black;
+    transition: all 2s;
+    font-family: 'Montserrat';
+    padding: 0 125px 0 125px;
+    position: relative;
+}
+
+body.switch {
+    background-color: black;
+    color: white;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 900px;
+    margin: 1em auto;
+    padding-top: 1.5em;
+}
+
+header {
+    margin: 0 auto 2em auto;
+}
+
+#banner {
+    position: relative;
+    display: flex;
+    width: 1100px;
+    height: 250px;
+    margin: auto;
+    background-color: rgb(235, 235, 235);
+    overflow: hidden;
+}
+
+#banner.switch {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em auto;
+    margin-top: 20px;
+}
+
+main section {
+    width: 25%;
+    background-color: #fffef1;
+    margin: 0.4em;
+    padding: 1em;
+}
+
+main section.switch {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+ol,
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section li {
+    padding-left: 1.2em;
+}
+
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    padding: .5em;
+    color: black;
+}
+
+section a:hover {
+    color: #333;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: #ca786d;
+    text-underline-offset: 3px;
+}
+
+section.switch a {
+    color: #333;
+}
+
+section.switch a:hover {
+    font-style: italic;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+button {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 12px;
+    background-color: #fffef1;
+    color: #333;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+button.switch {
+    background-color: white;
+    color: black;
+}
+
+button.switch:hover {
+    background-color: #333;
+    color: rgb(235, 235, 235);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h3.switch {
+    color: black;
+}
+
+#tapes{
+    position: absolute;
+    top: 465px;
+}
+
+#tapes img{
+    margin: 0 115px 0 115px;
+}
