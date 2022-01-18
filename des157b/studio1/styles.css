@@ -1,0 +1,91 @@
+body{
+    font-family: 'Lato';
+}
+
+#myVideo{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    left: 0;
+}
+
+#text1, #text2, #text3, #text4, #text5{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    position: absolute;
+}
+
+p{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+#line1{
+    top: 30px;
+    left: 30px;
+    font-size: 100px;
+}
+
+#line2{
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+    font-size: 100px;
+}
+
+#line3{
+    top: 45%;
+    left: 38%;
+}
+
+#line4{
+    top: 45%;
+    left: 38%;
+}
+
+#line5{
+    font-size: 400px;
+    top: 15%;
+    left: 28%;
+}
+
+/* Changing Lines */
+
+.hidden{
+    opacity: 0;
+}
+
+.showing{
+    opacity: 1;
+}
+
+/* Loading Spinner */
+
+.fa-spinner{
+    color: white;
+    font-size: 48px;
+    position: absolute;
+    left: 47%;
+    top: 47%;
+    animation: spin 2.5s infinite ease-in-out;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
