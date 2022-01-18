@@ -3,12 +3,12 @@
     const myVideo = document.querySelector('video');
     const screen = document.querySelector('section');
     const divs = document.querySelectorAll('div');
-    const loading = document.querySelector('.fa-spinner');
+    const loading = document.querySelector('#spinner');
 
     const intervals = {
-        start: [0,3,6,8,12],
-        stop: [3,6,9,12,17],
-        line: ['#text1', '#text2', '#text3', '#text4', '#text5']
+        start: [0,3,6,8,12,17],
+        stop: [3,6,9,12,17,18],
+        line: ['#text1', '#text2', '#text3', '#text4', '#text5','#text6']
     }
 
     const timing = setInterval(checkTime, 1000);

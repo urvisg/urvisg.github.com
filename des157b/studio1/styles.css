@@ -10,7 +10,7 @@ body{
     left: 0;
 }
 
-#text1, #text2, #text3, #text4, #text5{
+#text1, #text2, #text3, #text4, #text5, #text6{
     height: 100%;
     width: 100%;
     top: 0;
@@ -54,7 +54,7 @@ p{
 #line5{
     font-size: 400px;
     top: 15%;
-    left: 28%;
+    left: 25%;
 }
 
 /* Changing Lines */
@@ -69,7 +69,8 @@ p{
 
 /* Loading Spinner */
 
-.fa-spinner{
+#spinner{
+    position: absolute;
     color: white;
     font-size: 48px;
     position: absolute;
