@@ -1,0 +1,70 @@
+body{
+    font-family: 'Raleway';
+    color: white;
+    background-image: url("images/background.png");
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0 70px 0;
+}
+
+h2{
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+#main{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 250px 0 250px;
+    padding: 50px 50px 50px 50px;
+    background-color: rgb(255,255,255,0.15);
+    border: solid white 3px;
+    border-radius: 20px;
+}
+
+section{
+    text-align: center;
+}
+
+#buttons{
+    padding: 0 0 0 40px;
+    text-align: left;
+}
+
+button{
+    background-color: #FE2C55;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+#phone{
+    position: relative;
+}
+
+#reel{
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 156px;
+    height: 164.2px;
+    background-image: url("images/reel.png");
+}
+
+@keyframes moveY{
+    from{background-position-y:0px;}
+    to{background-position-y:-5134.5px;}
+}
+
+@keyframes back{
+    from{background-position-y:0px;}
+    to{background-position-y:0px;}
+}
