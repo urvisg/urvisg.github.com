@@ -16,6 +16,14 @@ h2{
     font-weight: 500;
 }
 
+p{
+    position: absolute;
+    top: 65%;
+    left: 24%;
+    color: black;
+    font-weight: 500;
+}
+
 #main{
     display: flex;
     justify-content: space-between;
