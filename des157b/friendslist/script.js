@@ -13,7 +13,6 @@ async function displayFriends(){
     const query = new Parse.Query(friends);
     try{
         const results = await query.ascending('lname').find();
-        // console.log(results);
 
         results.forEach(function(eachFriend){
             const id = eachFriend.id;
