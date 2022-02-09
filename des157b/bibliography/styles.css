@@ -1,0 +1,49 @@
+body{
+    background-color: #f7f7f7;
+    font-family: 'Montserrat';
+}
+
+h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#sub{
+    font-size: 24px;
+    margin: 0 0 50px 0;
+}
+
+a{
+    font-weight: 700;
+    text-decoration: none;
+    color: #7393B3;
+}
+
+header{
+    padding: 50px 250px 0 70px;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 70px 0 70px;
+}
+
+section{
+    width: 33%;
+    padding-right: 25px;
+}
+
+section:last-of-type{
+    padding-right: 0;
+}
