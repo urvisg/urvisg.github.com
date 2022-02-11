@@ -1,0 +1,38 @@
+body{
+    background-color: #f7f7f7;
+    margin: 0 150px 0 150px;
+    font-family: 'Montserrat';
+}
+
+article{
+    margin-bottom: 30px;
+}
+
+img{
+    float: left;
+    margin-right: 20px;
+}
+
+h1{
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 16px;
+    margin: 20px 0 40px 0;
+}
+
+h3{
+    font-size: 24px;
+}
+
+a{
+    color: #7393B3;
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.5em;
+}
