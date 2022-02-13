@@ -1,0 +1,50 @@
+body{
+    margin: auto;
+    padding: 30px 30px 30px 40px;
+    font-family: 'Montserrat';
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    top: 400px;
+    left: 1075px;
+}
+
+section{
+    margin-bottom: 35px;
+}
+
+section:last-of-type{
+    margin-bottom: 0;
+}
+
+#section1{
+    position: relative;
+}
+
+#section1 img{
+    margin-right: 50px;
+}
+
+#section1 img:last-of-type{
+    margin-right: 0;
+    float: none;
+    position: absolute;
+}
+
+#section2 img{
+    margin-right: 50px;
+}
+
+#section2 img:last-of-type{
+    margin-right: 0;
+}
+
+#section3 img{
+    margin-right: 80px;
+}
+
+#section3 img:last-of-type{
+    margin-right: 0;
+}
