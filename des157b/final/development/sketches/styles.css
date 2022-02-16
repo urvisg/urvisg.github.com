@@ -1,0 +1,28 @@
+body{
+    background-color: #f7f7f7;
+    font-family: 'Montserrat';
+    margin: 40px 300px 0 300px;
+    text-align: center;
+    position: relative;
+}
+
+h1{
+    text-align: left;
+    padding-left: 8%;
+}
+
+img{
+    border: solid black 2px;
+    margin-bottom: 10px;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+}
