@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 1</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <article id="landingpage" class="showing">
+        <article id="landsplit">
+            <div></div>
+            <section>
+                <h1>Workplace Gender Discrimination</h1>
+                <h2>noun |  /ˈwərkˌplās ˈjendər dəˌskriməˈnāSH(ə)n/</h2>
+                <p>an employee or a job applicant is treated differently or less favorably because of their sex or gender identity</p>
+                <input type="button" value="Be a part of the story" id="story">
+                </section>
+        </article>
+    </article>
+    <section id="navigation" class="hidden">
+        <p id="title">Name TBD</p>
+        <nav>
+            <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Links</a></li>
+                <li><a href="#" id="submit">Submit</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div></div>
+    <article id="mappage" class="hidden">
+        <section id="header">
+            <h1>Our Stories</h1>
+            <div id="toggle">
+                <p id="tlabel">Map</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </section>
+        <div></div>
+        <section id="map">
+            <!-- add in map here -->
+            <div id="temp"></div>
+            <article>
+
+            </article>
+        </section>
+    </article>
+    <article id="submitpage" class="hidden">
+        <article id="splitbody">
+            <section id="text">
+                <h1>Tell Your Story<br>Good or Bad :)</h1>
+                <h2>We want to know more</h2>
+            </section>
+            <section id="form">
+                <form>
+                    <section id="firstform" class="showing">
+                        <label for="anonname">Give your post an anonymous name</label><br>
+                        <input type="text" id="anonname" name="anonname"><br>
+                        <label for="location">Where do you live?</label><br>
+                        <input type="text" id="location" name="location"><br>
+                        <label for="age">What is your age?</label><br>
+                        <input type="text" id="age" name="age"><br>
+                        <label for="position">What is your work position?</label><br>
+                        <input type="text" id="position" name="position"><br>
+
+                        <div id="buttons">
+                            <input type="button" value="Next" id="next"><br>
+                            <input type="button" value="Clear All" id="clear">
+                        </div>
+                    </section>
+                    <section id="secondform" class="hidden">
+                        <label for="response">What do you want to say? Share? Complain about?</label><br>
+                        <input type="text" id="response" name="response"><br>
+
+                        <div id="buttons">
+                            <input type="button" value="Submit" id="submit"><br>
+                            <input type="button" value="Clear All" id="clear">
+                        </div>
+                    </section>
+                </form>
+            </section>
+        </article>
+    </article>
+    <article id="thankyou" class="hidden">
+        <h1>Thank You For Sharing Your Story!</h1>
+        <p>Your submission contributes to family of stories that are displayed on this platform. It contributes to a community of people finding comfort that may share a similar experience or are looking for positive experiences to look up to.</p>
+        <input type="button" value="Explore" id="explore">
+    </article>
+</body>
+</html>

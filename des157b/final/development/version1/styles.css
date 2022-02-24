@@ -1,0 +1,312 @@
+body{
+    margin: 30px 60px 20px 60px;
+    font-family: 'Montserrat';
+}
+
+/* Changing Visibility */
+
+.showing{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Landing Page */
+#landsplit{
+    display: flex;
+    justify-content: space-between;
+}
+
+#landingpage div{
+    width: 130%;
+}
+
+#landingpage h1{
+    font-size: 42px;
+    padding-right: 200px;
+}
+
+#landingpage h2, #landingpage p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#landingpage p{
+    padding-right: 200px;
+}
+
+#story{
+    width: 35%;
+}
+
+/* Map Page */
+#title{
+    float: left;
+    font-size: 24px;
+}
+
+div{
+    clear: both;
+}
+
+ul{
+    display: flex;
+    float: right;
+    list-style-type: none;
+    margin-top: 35px;
+}
+
+li{
+    margin: 0 15px 0 15px;
+}
+
+li:last-of-type{
+  margin-right: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#submit{
+    background-color: #83B1FF;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+#mappage #header{
+    width: 100%;
+    position: relative;
+}
+
+#mappage h1{
+    font-size: 36px;
+}
+
+#mappage #toggle{
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 0;
+}
+
+#mappage #tlabel{
+    margin: 5px 20px 0 0;
+}
+
+#mappage #map{
+    position: relative;
+}
+
+#mappage #temp{
+    background-color: grey;
+    width: 100%;
+    height: 534px;
+}
+
+#mappage article{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 361px;
+    height: 482.44px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Submission Page */
+
+#splitbody{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#form{
+    background-color: white;
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
+    /* width: 763px; */
+    width: 60%;
+    height: 552px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+form{
+  margin: 50px;
+}
+
+#text{
+    margin: 140px 30px 0 0;
+}
+
+#submitpage h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#submitpage h2{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0 20px 0;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+input:nth-of-type(4){
+    margin-bottom: 40px;
+}
+
+#next{
+    background-color: #83B1FF;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    width: 20%;
+}
+
+#next:hover{
+  cursor: pointer;
+}
+
+#submit{
+    background-color: #83B1FF;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    width: 20%;
+    height: 10%;
+}
+
+#submit:hover{
+    cursor: pointer;
+  }
+
+#clear{
+    all: unset;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#clear:hover{
+    cursor: pointer;
+}
+
+#response{
+    height: 300px;
+}
+
+#buttons{
+  text-align: center;
+}
+
+/* Thank You Page After Submitting */
+#thankyou{
+    text-align: center;
+}
+
+#thankyou h1{
+    font-weight: 500;
+    font-size: 48px;
+    margin: 100px 0 50px 0;
+}
+
+#thankyou p{
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 0 350px 0 350px;
+    margin-bottom: 50px;
+}
+
+#explore{
+    width: 10%;
+    height: 40px;
+    border: solid black 2px;
+    background-color: white;
+}
+
+#explore:hover{
+    cursor: pointer;
+}
+
+/* Code to design the slider */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transition: .4s;
+    border: solid black 2px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #CADEFF;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #CADEFF;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
