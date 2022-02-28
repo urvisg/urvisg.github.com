@@ -5,7 +5,6 @@ body{
 }
 
 /* Changing Visibility */
-
 .showing{
     display: block;
 }
@@ -91,6 +90,11 @@ a{
     color: black;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 400;
+}
+
+a:hover{
+    cursor: pointer;
 }
 
 #submit{
@@ -105,42 +109,124 @@ a{
     cursor: pointer;
 }
 
+/* Main */
+main{
+    position: relative;
+}
+
+#toggle{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 2%;
+    right: 0;
+}
+
+#toggle p{
+    margin: 5px 15px 0 0;
+}
+
 /* Map Page */
-#mappage #header{
+#header{
     width: 100%;
     position: relative;
 }
 
-#mappage h1{
+#header h1{
     font-size: 36px;
-}
-
-#mappage #tlabel{
-    margin: 5px 20px 0 0;
 }
 
 #mappage #map{
     position: relative;
 }
 
-#mappage #temp{
-    background-color: grey;
+#mappage #map #start{
+    transform: translate(-50%, 0);
+    margin: 40% 50% 50% 50%;
+}
+
+#mappage #map2{
+    /* background-color: grey; */
+    z-index: 1;
     width: 100%;
     height: 534px;
 }
 
 #mappage article{
     position: absolute;
+    z-index: 2;
     top: 25px;
-    left: 30px;
+    left: 60px;
     width: 361px;
     height: 482.44px;
     background-color: white;
     border-radius: 10px;
 }
 
-/* Submission Page */
+#mlocation, #mposition, #mage{
+    display: flex;
+}
 
+#mlocation img, #mposition img, #mage img{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+/* List Page */
+#list{
+    width: 100%;
+    height: 534px;
+}
+
+#list p{
+    margin: 0;
+}
+
+.grid{
+    position: relative;
+}
+
+.grid-item{
+    color: black;
+    background-color: grey;
+    padding: 30px;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.grid-item p{
+    font-size: 20px;
+}
+
+#location, #position, #age{
+    display: flex;
+}
+
+#location img, #position img, #age img{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+#position img{
+    margin-bottom: 25px;
+}
+
+#name p{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+span{
+    text-transform: capitalize;
+}
+
+/* Submission Page */
 #splitbody{
     display: flex;
     justify-content: space-between;
@@ -273,18 +359,6 @@ input:nth-of-type(4){
 }
 
 /* Toggle Slider */
-
-#toggle{
-    position: absolute;
-    display: flex;
-    top: 15.5%;
-    right: 0;
-}
-
-#toggle p{
-    margin: 5px 15px 0 0;
-}
-
 .switch {
     position: relative;
     display: inline-block;
