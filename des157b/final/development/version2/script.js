@@ -1,4 +1,5 @@
 const elink = document.querySelector('#elink');
+const link = document.querySelector('#links');
 
 const slider = document.querySelector('.slider.round');
 const tlabel = document.querySelector('#tlabel');
@@ -22,6 +23,7 @@ const submitpage = document.querySelector('#submitpage');
 const firstform = document.querySelector('#firstform');
 const secondform = document.querySelector('#secondform');
 const thankyou = document.querySelector('#thankyou');
+const resourcespage = document.querySelector('#resourcespage');
 
 // Back4App
 Parse.initialize("aCSvAxSmvzPT231gRq4kZVCP4ktz3MFCMeAg66g4","2LLLjoQbxAhiYTa28MRmMMEE4oWWCvUHY9VnqO6b"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
@@ -84,7 +86,6 @@ send.addEventListener('click', function(){
         eachField.value = "";
     }
     sendData();
-    console.log(note);
 
     for (let category in note) {
         delete note[category];
@@ -125,7 +126,6 @@ function sendData(){
 }
 
 explore.addEventListener('click', function(){
-    console.log("in");
     thankyou.className = 'hidden';
     mappage.className = 'showing';
     listpage.className = 'hidden';
@@ -185,7 +185,7 @@ async function getResponses(){
             listContainer.append(theListItem);
         });
     }catch(error){
-        console.error('Error while fetching Friends',error);
+        console.error('Error while fetching Notes',error);
     }
 }
 
@@ -193,6 +193,7 @@ async function getResponses(){
 elink.addEventListener('click', function(){
     main.className = 'showing';
     elink.style.fontWeight = '600';
+    link.style.fontWeight = '400';
     mappage.className = 'showing';
     document.getElementById("checkbox").checked = false;
     tlabel.textContent = 'Map';
@@ -201,6 +202,15 @@ elink.addEventListener('click', function(){
         submitpage.className = 'hidden';
         thankyou.className = 'hidden';
     }
+});
+
+link.addEventListener('click', function(){
+    resourcespage.className = 'showing';
+    main.className = 'hidden';
+    mappage.className = 'hidden';
+    listpage.className = 'hidden';
+    link.style.fontWeight = '600';
+    elink.style.fontWeight = '400';
 });
 
 // Map section of explore page
@@ -228,7 +238,7 @@ async function makePoints(){
         count += 1;
         circles.push([`circle${count}`, eachNote.get('latitude'), eachNote.get('longitude'), eachNote.id])
     });
-    console.log(circles);
+
     let circle;
     for (var i = 0; i < circles.length; i++) {
         circle = new L.circle([circles[i][1], circles[i][2]],{
@@ -244,20 +254,19 @@ async function makePoints(){
         circle.on('click', function(e) {
             L.DomEvent.stopPropagation(e);
             display.innerHTML = "";
-            console.log(circle.options.id);
             query.get(circle.options.id)
                 .then((point) => {
                 // The object was retrieved successfully.
                 display.innerHTML = `
                     <div id="mname"><p>from <span>${point.get('name').toUpperCase()}</span></p></div>
                     <div id="mlocation"><img src="images/pin.svg"><p>${point.get('location')}</p></div>
-                    <div id="age"><img src="images/work.svg"><p>${point.get('age')}</p></div>
-                    <div id="mpostion"><img src="images/work.svg"><p>${point.get('position')}</p></div>
+                    <div id="mage"><img src="images/age.svg"><p>${point.get('age')}</p></div>
+                    <div id="mposition"><img src="images/work.svg"><p>${point.get('position')}</p></div>
                     <div id="mresponse"><p>${point.get('response')}</p></div>
                     `;
                 }, (error) => {
                 // The object was not retrieved successfully.
-                console.log("nooo");
+                console.log('Click not working');
             });
         });
     }

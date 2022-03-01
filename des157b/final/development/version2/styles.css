@@ -157,14 +157,21 @@ main{
     z-index: 2;
     top: 25px;
     left: 60px;
-    width: 361px;
-    height: 482.44px;
+    /* width: 361px; */
+    width: 27%;
+    /* height: 482.44px; */
+    height: 83%;
     background-color: white;
     border-radius: 10px;
+    padding: 20px;
 }
 
 #mlocation, #mposition, #mage{
     display: flex;
+}
+
+#mappage article p{
+    margin: 0;
 }
 
 #mlocation img, #mposition img, #mage img{
@@ -173,6 +180,26 @@ main{
     margin: 0;
     margin-right: 20px;
     margin-bottom: 5px;
+}
+
+#mname{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+#mlocation p, #mage p, #mposition p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#mposition{
+    margin-bottom: 20px;
+}
+
+#mresponse{
+    font-size: 18px;
+    line-height: 1.5em;
 }
 
 /* List Page */
@@ -191,7 +218,8 @@ main{
 
 .grid-item{
     color: black;
-    background-color: grey;
+    background-color: white;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
     padding: 30px;
     width: 300px;
     margin-bottom: 30px;
@@ -219,7 +247,7 @@ main{
 #name p{
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 span{
@@ -275,7 +303,7 @@ input{
 }
 
 input:nth-of-type(4){
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #next{
@@ -288,6 +316,7 @@ input:nth-of-type(4){
     font-weight: 600;
     border: none;
     border-radius: 7px;
+    margin-bottom: 10px;
 }
 
 #next:hover{
@@ -304,6 +333,7 @@ input:nth-of-type(4){
     border-radius: 7px;
     width: 20%;
     height: 40px;
+    margin-bottom: 10px;
 }
 
 #send:hover{
@@ -322,7 +352,12 @@ input:nth-of-type(4){
 }
 
 #response{
-    height: 300px;
+    /* height: 300px;
+    width: 100%;
+    line-height: 300px; */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: solid black 2px;
 }
 
 #buttons{
@@ -356,6 +391,41 @@ input:nth-of-type(4){
 
 #explore:hover{
     cursor: pointer;
+}
+
+/* Resoures Page */
+#resourcespage h1{
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+#resourcespage h2{
+    font-size: 24px;
+}
+
+#resourcespage p{
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 40px;
+}
+
+#resource1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#resourcespage a{
+    background-color: #83b1ff;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#resource1 section{
+    width: 45%;
 }
 
 /* Toggle Slider */
