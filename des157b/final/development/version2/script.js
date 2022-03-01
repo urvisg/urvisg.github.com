@@ -216,7 +216,6 @@ accessToken: 'pk.eyJ1IjoidXJ2aWciLCJhIjoiY2t5djVmaThqMDM0MDJ4cWt6azVsbGxlYiJ9.uf
 }).addTo(map);
 
 makePoints();
-// clickPoint();
 
 let temp = [];
 
@@ -267,17 +266,3 @@ async function makePoints(){
 setInterval(function () {
     map.invalidateSize();
 }, 100);
-
-// async function clickPoint(){
-    // console.log("in1");
-    // const Notes = Parse.Object.extend('Notes');
-    // const query = new Parse.Query(Notes);
-    // const results = await query.ascending('createdAt').find();
-    // console.log(results);
-    // for(let i;i < circles.length;i++){
-    //     circles[i].on('click', function(e) {
-    //         // L.DomEvent.stopPropagation(e);
-    //         console.log('marker click!');
-    //     });
-    // }
-// }
