@@ -262,12 +262,6 @@ async function makePoints(){
             });
         });
     }
-    // for (var i = 0; i < temp.length; i++){
-    //     temp[i].on('click', function(e){
-    //         L.DomEvent.stopPropagation(e);
-    //         display.innerHTML = "";
-    //     }
-    // }
 }
 
 setInterval(function () {
