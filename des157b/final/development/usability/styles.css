@@ -402,6 +402,7 @@ input:nth-of-type(4){
 #resourcespage h1{
     margin-top: 40px;
     margin-bottom: 50px;
+    padding-right: 500px;
     font-size: 30px;
 }
 
@@ -416,9 +417,17 @@ input:nth-of-type(4){
 }
 
 #resource1{
+    margin-bottom: 60px;
+}
+
+#resource1, #resource2{
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+}
+
+#resource2{
+    width: 45%;
 }
 
 #resourcespage a{

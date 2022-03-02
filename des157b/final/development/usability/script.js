@@ -205,6 +205,7 @@ elink.addEventListener('click', function(){
     elink.style.fontWeight = '600';
     link.style.fontWeight = '400';
     mappage.className = 'showing';
+    resourcespage.className = 'hidden';
     document.getElementById("checkbox").checked = false;
     tlabel.textContent = 'Map';
     listpage.className = 'hidden';
