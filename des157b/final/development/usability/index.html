@@ -26,7 +26,9 @@
 <body>
     <article id="landingpage" class="showing">
         <article id="landsplit">
-            <div></div>
+            <div>
+                <img src="images/inequality.svg" alt="inequality">
+            </div>
             <section>
                 <h1>Workplace Gender Discrimination</h1>
                 <h2>noun |  /ˈwərkˌplās ˈjendər dəˌskriməˈnāSH(ə)n/</h2>
@@ -92,13 +94,13 @@
                 <form>
                     <section id="firstform" class="showing">
                         <label for="anonname">Give your post an anonymous name</label><br>
-                        <input type="text" id="anonname" name="anonname"><br>
+                        <input type="text" id="anonname" name="anonname" required><br>
                         <label for="location">Where do you live?</label><br>
-                        <input type="text" id="location" name="location"><br>
+                        <input type="text" id="location" name="location" required><br>
                         <label for="age">What is your age?</label><br>
-                        <input type="text" id="age" name="age"><br>
+                        <input type="text" id="age" name="age" required><br>
                         <label for="position">What is your work position?</label><br>
-                        <input type="text" id="position" name="position"><br>
+                        <input type="text" id="position" name="position" required><br>
 
                         <div id="buttons">
                             <input type="button" value="Next" id="next"><br>
@@ -108,7 +110,7 @@
                     <section id="secondform" class="hidden">
                         <label for="response">What do you want to say? Share? Complain about?</label><br>
                         <!-- <input type="text" id="response" name="response"><br> -->
-                        <textarea id="response" rows="17" cols="73"></textarea><br>
+                        <textarea id="response" rows="17" cols="73" required></textarea><br>
 
                         <div id="buttons">
                             <input type="button" value="Submit" id="send"><br>

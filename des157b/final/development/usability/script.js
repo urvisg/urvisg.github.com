@@ -9,6 +9,8 @@ const story = document.querySelector('#story');
 const submit = document.querySelector('#submit');
 const next = document.querySelector('#next');
 const send = document.querySelector('#send');
+const clear1 = document.querySelector('#firstform #clear');
+const clear2 = document.querySelector('#secondform #clear');
 const explore = document.querySelector('#explore');
 const display = document.querySelector('#mappage article');
 
@@ -39,6 +41,7 @@ let note = {
     'longitude': null
 };
 
+// Move into main website
 story.addEventListener('click', function(){
     landingpage.className = 'hidden';
     mappage.className = 'showing';
@@ -48,6 +51,7 @@ story.addEventListener('click', function(){
     // displayList();
 });
 
+// Move to Submit Page
 submit.addEventListener('click', function(){
     mappage.className = 'hidden';
     thankyou.className = 'hidden';
@@ -59,6 +63,7 @@ submit.addEventListener('click', function(){
     elink.style.fontWeight = '400';
 });
 
+// Move to Next Part of the Form
 next.addEventListener('click', function(event){
     event.preventDefault();
     firstform.className = 'hidden';
@@ -71,12 +76,13 @@ next.addEventListener('click', function(event){
 
     getLocation();
 
-    let form1 = document.querySelectorAll("input[type=text]");
+    let form1 = document.querySelectorAll("#firstform input[type=text]");
     for (let eachField of form1) {
         eachField.value = "";
     }
 });
 
+// Sending in a response
 send.addEventListener('click', function(){
     submitpage.className = 'hidden';
     thankyou.className = 'showing';
@@ -84,8 +90,8 @@ send.addEventListener('click', function(){
 
     note['response'] = document.querySelector('#response').value;
 
-    let form1 = document.querySelectorAll("input[type=text]");
-    for (let eachField of form1) {
+    let form2 = document.querySelectorAll("#secondform input[type=text]");
+    for (let eachField of form2) {
         eachField.value = "";
     }
     sendData();
@@ -93,6 +99,19 @@ send.addEventListener('click', function(){
     for (let category in note) {
         delete note[category];
     }
+});
+
+// Clear All Buttons
+clear1.addEventListener('click', function(){
+    let form1 = document.querySelectorAll("#firstform input[type=text]");
+    for (let eachField of form1) {
+        eachField.value = "";
+    }
+});
+
+clear2.addEventListener('click', function(){
+    let form2 = document.querySelector("#secondform #response");
+    form2.value = "";
 });
 
 // Get user's location in coordinates
@@ -132,6 +151,7 @@ function sendData(){
     }
 }
 
+// Switch the explore page using nav bar
 explore.addEventListener('click', function(){
     thankyou.className = 'hidden';
     resourcespage.className = 'hidden';
@@ -141,6 +161,7 @@ explore.addEventListener('click', function(){
     elink.style.fontWeight = '600';
 });
 
+// Handling toggle changes in view
 slider.addEventListener('click', function(){
     if(document.getElementById("checkbox").checked == false){
         mappage.className = 'hidden';
@@ -154,6 +175,7 @@ slider.addEventListener('click', function(){
     } 
 });
 
+// display list on the page
 function displayList(){
     let elem = document.querySelector('.grid');
     let msnry = new Masonry( elem, {
@@ -238,8 +260,7 @@ accessToken: 'pk.eyJ1IjoidXJ2aWciLCJhIjoiY2t5djVmaThqMDM0MDJ4cWt6azVsbGxlYiJ9.uf
 
 makePoints();
 
-let temp = [];
-
+// adding points to the map
 async function makePoints(){
     let count = 0;
     const Notes = Parse.Object.extend('Notes');
@@ -260,11 +281,10 @@ async function makePoints(){
             radius: 10000
         }).addTo(map);
 
-        temp.push(circle);
-
         circle.on('click', function(e) {
             L.DomEvent.stopPropagation(e);
             display.innerHTML = "";
+            display.style.overflowY = 'scroll';
             query.get(circle.options.id)
                 .then((point) => {
                 // The object was retrieved successfully.
