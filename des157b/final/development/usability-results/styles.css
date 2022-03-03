@@ -1,6 +1,6 @@
 body{
     font-family: 'Montserrat';
-    margin: 50px 200px 50px 200px;
+    margin: 50px 215px 50px 215px;
 }
 
 #date{
@@ -25,4 +25,12 @@ figcaption{
 
 p{
     line-height: 1.5em;
+}
+
+h1{
+    margin: 0 0 15px;
+}
+
+h2{
+    margin: 40px 0 0 0;
 }
