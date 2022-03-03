@@ -87,7 +87,7 @@ ul{
 }
 
 li{
-    margin: 0 15px 0 15px;
+    margin: 0 20px 0 20px;
 }
 
 li:last-of-type{
@@ -116,6 +116,10 @@ a:hover{
 #submit:hover{
     cursor: pointer;
     background-color: #5c7cb3;
+}
+
+#links{
+    margin-right: 10px;
 }
 
 /* Main */
@@ -408,7 +412,7 @@ input:nth-of-type(4){
 #resourcespage p{
     font-size: 16px;
     line-height: 1.5em;
-    margin: 00 40px 0;
+    margin: 0 0 40px 0;
 }
 
 #resource1{
@@ -434,7 +438,7 @@ input:nth-of-type(4){
     font-size: 14px;
 }
 
-#resourcespage a{
+#resourcespage a:hover{
     cursor: pointer;
     background-color: #5c7cb3;
 }
