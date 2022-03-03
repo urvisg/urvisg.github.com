@@ -273,6 +273,7 @@ async function makePoints(){
 
     let circle;
     for (var i = 0; i < circles.length; i++) {
+        console.log(circles[i][1]);
         circle = new L.circle([circles[i][1], circles[i][2]],{
             id: circles[i][3],
             color: '#83B1FF',

@@ -1,0 +1,28 @@
+body{
+    font-family: 'Montserrat';
+    margin: 50px 200px 50px 200px;
+}
+
+#date{
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+}
+
+section img{
+    margin: 0 10px 0 10px;
+}
+
+figcaption{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+p{
+    line-height: 1.5em;
+}
