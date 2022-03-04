@@ -1,0 +1,515 @@
+body{
+    margin: 30px 60px 20px 60px;
+    font-family: 'Montserrat';
+    position: relative;
+}
+
+/* Changing Visibility */
+.showing{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Landing Page */
+#landsplit{
+    display: flex;
+    justify-content: space-between;
+}
+
+#landingpage div{
+    width: 100%;
+    position: relative;
+}
+
+#landingpage img{
+    position: absolute;
+    top: 38%;
+    left: 15%;
+}
+
+#landingpage section{
+    padding: 130px 0 0 30px;
+}
+
+#landingpage h1{
+    font-size: 42px;
+    padding-right: 50px;
+}
+
+#landingpage h2{
+    margin: 0 0 40px 0;
+}
+
+#landingpage h2, #landingpage p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#landingpage p{
+    padding-right: 200px;
+    margin: 0 0 50px 0;
+    line-height: 1.5em;
+}
+
+#story{
+    width: 41%;
+    height: 12%;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #83B1FF;
+    border: none;
+}
+
+#story:hover{
+    cursor: pointer;
+    background-color: #5c7cb3;
+}
+
+/* Nav Bar */
+#title{
+    float: left;
+    font-size: 24px;
+}
+
+#title:hover{
+    cursor: pointer;
+}
+
+div{
+    clear: both;
+}
+
+ul{
+    display: flex;
+    float: right;
+    list-style-type: none;
+    margin: 35px 0 0 0;
+}
+
+li{
+    margin: 0 20px 0 20px;
+}
+
+li:last-of-type{
+    margin: 0 0 0 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+#submit{
+    background-color: #83B1FF;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: #5c7cb3;
+}
+
+#links{
+    margin-right: 10px;
+}
+
+/* Main */
+main{
+    position: relative;
+}
+
+#toggle{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 2%;
+    right: 0;
+}
+
+#toggle p{
+    margin: 5px 15px 0 0;
+}
+
+/* Map Page */
+#header{
+    width: 100%;
+    position: relative;
+}
+
+#header h1{
+    font-size: 36px;
+}
+
+#mappage #map{
+    position: relative;
+}
+
+#mappage #map #start{
+    transform: translate(-50%, 0);
+    margin: 40% 50% 50% 50%;
+}
+
+#mappage #map2{
+    z-index: 1;
+    width: 100%;
+    height: 534px;
+}
+
+#mappage article{
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 60px;
+    width: 25%;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    word-wrap: break-word;
+}
+
+#mlocation, #mposition, #mage{
+    display: flex;
+}
+
+#mappage article p{
+    margin: 0;
+}
+
+#mlocation img, #mposition img, #mage img{
+    width: 20px;
+    height: 20px;
+    margin: 0 20px 5px 0;
+}
+
+#mname{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+}
+
+#mlocation p, #mage p, #mposition p{
+    font-size: 18px;
+    margin: 0 0 20px 0;
+}
+
+#mposition{
+    margin: 0 0 20px 0;
+}
+
+#mresponse{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+/* List Page */
+#list{
+    width: 100%;
+}
+
+#list p{
+    margin: 0;
+}
+
+.grid-item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: black;
+    background-color: white;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.1));
+    padding: 30px;
+    width: 320px;
+    height: 350px;
+    overflow: hidden;
+    margin: 0 12px 30px 12px;
+}
+
+.grid-item:hover{
+    overflow-y: auto;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.2));
+}
+
+.grid-item p{
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+#llocation, #lposition, #lage{
+    display: flex;
+}
+
+#llocation img, #lposition img, #lage img{
+    width: 20px;
+    height: 20px;
+    margin: 0 20px 10px 0;
+}
+
+#lposition img{
+    margin: 0 0 25px 0;
+}
+
+#lname p{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+}
+
+span{
+    text-transform: capitalize;
+}
+
+/* Submission Page */
+#splitbody{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+#form{
+    background-color: white;
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
+    width: 60%;
+    height: 552px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+form{
+    margin: 50px;
+}
+
+#text{
+    margin: 140px 30px 0 0;
+}
+
+#submitpage h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#submitpage h2{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0 20px 0;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+input:nth-of-type(4){
+    margin: 0 0 20px 0;
+}
+
+#next{
+    width: 20%;
+    height: 40px;
+    background-color: #83B1FF;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    margin: 0 0 10px 0;
+}
+
+#next:hover{
+    cursor: pointer;
+    background-color: #5c7cb3;
+}
+
+#send{
+    background-color: #83B1FF;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    width: 20%;
+    height: 40px;
+    margin: 0 0 10px 0;
+}
+
+#send:hover{
+    cursor: pointer;
+    background-color: #5c7cb3;
+}
+
+#clear{
+    all: unset;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#clear:hover{
+    cursor: pointer;
+}
+
+#response{
+    border: solid black 2px;
+    margin: 10px 0 15px 0;
+}
+
+#buttons{
+  text-align: center;
+}
+
+/* Thank You Page After Submitting */
+#thankyou{
+    text-align: center;
+}
+
+#thankyou h1{
+    font-weight: 500;
+    font-size: 48px;
+    margin: 100px 0 50px 0;
+}
+
+#thankyou p{
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 0 350px 0 350px;
+    margin: 0 0 50px 0;
+}
+
+#explore{
+    width: 10%;
+    height: 40px;
+    border: solid black 2px;
+    background-color: white;
+}
+
+#explore:hover{
+    cursor: pointer;
+}
+
+/* Resoures Page */
+#resourcespage h1{
+    padding-right: 500px;
+    font-size: 30px;
+    margin: 40px 0 50px 0;
+}
+
+#resourcespage h2{
+    font-size: 24px;
+}
+
+#resourcespage p{
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0 0 40px 0;
+}
+
+#resource1{
+    margin: 0 0 60px 0;
+}
+
+#resource1, #resource2{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 50px 0;
+}
+
+#resource2{
+    width: 45%;
+}
+
+#resourcespage a{
+    background-color: #83b1ff;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#resourcespage a:hover{
+    cursor: pointer;
+    background-color: #5c7cb3;
+}
+
+#resource1 section{
+    width: 45%;
+}
+
+/* Toggle Slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transition: .4s;
+    border: solid black 2px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #CADEFF;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #CADEFF;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
