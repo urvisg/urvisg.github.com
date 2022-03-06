@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Version 1</title>
+    <title>Version 3</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
     </article>
 
     <section id="navigation" class="hidden">
-        <p id="title">VENT</p>
+        <p id="brand">VENT</p>
         <nav>
             <ul>
                 <li><a id="elink">Explore</a></li>
@@ -66,8 +66,9 @@
             <section id="map">
                 <!-- add in map here -->
                 <div id="map2"></div>
-                <article>
+                <article id="display" class="showing">
                     <!-- add data here -->
+                    <img id="x" src="images/x.svg">
                     <img src="images/pickpoint.svg" alt="Pick a Point" id="start">
                 </article>
             </section>
@@ -93,14 +94,16 @@
             <section id="form">
                 <form>
                     <section id="firstform" class="showing">
-                        <label for="anonname">Give your post an anonymous name</label><br>
-                        <input type="text" id="anonname" name="anonname" required><br>
+                        <!-- <label for="title">Give your post a short title</label><br>
+                        <input type="text" id="title" name="title" placeholder="eg. unequal work load" required><br> -->
+                        <label for="anonname">Give yourself an anonymous username</label><br>
+                        <input type="text" id="anonname" name="anonname" placeholder="eg. princess peach"required><br>
                         <label for="location">Where do you live?</label><br>
-                        <input type="text" id="location" name="location" required><br>
+                        <input type="text" id="location" name="location" placeholder="eg. Sacramento, CA" required><br>
                         <label for="age">What is your age?</label><br>
-                        <input type="text" id="age" name="age" required><br>
+                        <input type="text" id="age" name="age" placeholder="eg. 25"required><br>
                         <label for="position">What is your work position?</label><br>
-                        <input type="text" id="position" name="position" required><br>
+                        <input type="text" id="position" name="position" placeholder="eg. senior engineer" required><br>
 
                         <div id="buttons">
                             <input type="button" value="Next" id="next"><br>
@@ -108,9 +111,11 @@
                         </div>
                     </section>
                     <section id="secondform" class="hidden">
+                        <label for="title">Give your post a short title</label><br>
+                        <input type="text" id="title" name="title" placeholder="eg. unequal work load" required><br>
                         <label for="response">What do you want to say? Share? Complain about?</label><br>
                         <!-- <input type="text" id="response" name="response"><br> -->
-                        <textarea id="response" rows="17" cols="73" required></textarea><br>
+                        <textarea id="response" rows="12" cols="73" required></textarea><br>
 
                         <div id="buttons">
                             <input type="button" value="Submit" id="send"><br>
@@ -130,7 +135,7 @@
 
     <article id="resourcespage" class="hidden">
         <h1>Resources to Help Deal with Gender Discrimination in the Workplace</h1>
-        <section id="resource1">
+        <section id="resources">
             <section>
                 <h2>Equal Rights Activists</h2>
                 <p>The purpose of this Know Your Rights Guide is to help you understand your rights and options if you have experienced gender discrimination at work. This guide is not official legal advice. Laws frequently change and can be interpreted in different ways, so we cannot guarantee that all of the information in this Guide is accurate as it applies to your specific situation. </p>
@@ -141,16 +146,15 @@
                 <p>This page provides links to resources available through the Department of Industrial Relations (DIR), as well as other resources relevant to women working in the State of California.</p>
                 <a href="https://www.dir.ca.gov/women_workers.html">Go to Page</a>
             </section>
-        </section>
-
-        <section id="resource2">
             <section>
                 <h2>US Equal Employment Opportunity Commission</h2>
                 <p>The U.S. Equal Employment Opportunity Commission (EEOC) is responsible for enforcing federal laws that make it illegal to discriminate against a job applicant or an employee because of the person's race, color, religion, sex (including pregnancy, transgender status, and sexual orientation), national origin, age (40 or older), disability or genetic information.</p>
                 <a href="https://www.eeoc.gov/">Go to Page</a>
             </section>
-            <section></section>
         </section>
     </article>
 </body>
 </html>
+
+<!-- Attributing Icons Used -->
+<!-- <a href="https://www.flaticon.com/free-icons/age-group" title="age-group icons">Age-group icons created by Freepik - Flaticon</a> -->
