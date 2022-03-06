@@ -95,10 +95,12 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
 
         note['name'] = document.querySelector('#anonname').value;
         note['location'] = document.querySelector('#location').value;
+        note['latitude'] = document.querySelector('#latitude').value;
+        note['longitude'] = document.querySelector('#longitude').value;
         note['age'] = document.querySelector('#age').value;
         note['position'] = document.querySelector('#position').value;
 
-        getLocation();
+        // getLocation();
 
         let form1 = document.querySelectorAll("#firstform input[type=text]");
         for (let eachField of form1) {
@@ -140,22 +142,22 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
     });
 
     // Get user's location in coordinates
-    function getLocation() {
-        let options;
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, options);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-        options = {
-            enableHighAccuracy: true
-        }
-    }
+    // function getLocation() {
+    //     let options;
+    //     if (navigator.geolocation) {
+    //         navigator.geolocation.getCurrentPosition(showPosition, options);
+    //     } else {
+    //         x.innerHTML = "Geolocation is not supported by this browser.";
+    //     }
+    //     options = {
+    //         enableHighAccuracy: true
+    //     }
+    // }
     
-    function showPosition(position) {
-        note['latitude'] = position.coords.latitude;
-        note['longitude'] = position.coords.longitude;
-    }
+    // function showPosition(position) {
+    //     note['latitude'] = position.coords.latitude;
+    //     note['longitude'] = position.coords.longitude;
+    // }
 
     // Send data to back4App
     function sendData(){
@@ -167,8 +169,8 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         Notes.set("age", note['age']);
         Notes.set("position", note['position']);
         Notes.set("response", note['response']);
-        Notes.set("latitude", note['latitude']);
-        Notes.set("longitude", note['longitude']);
+        Notes.set("latitude", parseFloat(note['latitude']));
+        Notes.set("longitude", parseFloat(note['longitude']));
         try {
             let result = Notes.save()
             // alert('New object created with objectId: ' + result.id);
@@ -279,6 +281,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
 
     // Map section of explore page
     // var map = L.map('map2').setView([57.774929, -123.419418], 5);
+    // var map = L.map('map2').setView([38.5744896, -121.7560576], 13);
     // 38.5744896 -121.7560576
     //  17.9454064 11.3885184
     var map = L.map('map2').setView([56.519896, -133.144576], 10);

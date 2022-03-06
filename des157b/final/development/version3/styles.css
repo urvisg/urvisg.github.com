@@ -305,6 +305,21 @@ form{
     margin: 40px 50px 50px 50px;
 }
 
+#coordinates{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+#coordinates div:first-of-type{
+    margin-right: 50px;
+}
+
+#coordinates a{
+    text-decoration: underline;
+    font-weight: 600;
+    color: #83B1FF;
+}
+
 #text{
     margin: 140px 30px 0 0;
 }
