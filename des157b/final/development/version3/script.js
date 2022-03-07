@@ -100,8 +100,6 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         note['age'] = document.querySelector('#age').value;
         note['position'] = document.querySelector('#position').value;
 
-        // getLocation();
-
         let form1 = document.querySelectorAll("#firstform input[type=text]");
         for (let eachField of form1) {
             eachField.value = "";
@@ -141,24 +139,6 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         form2.value = "";
     });
 
-    // Get user's location in coordinates
-    // function getLocation() {
-    //     let options;
-    //     if (navigator.geolocation) {
-    //         navigator.geolocation.getCurrentPosition(showPosition, options);
-    //     } else {
-    //         x.innerHTML = "Geolocation is not supported by this browser.";
-    //     }
-    //     options = {
-    //         enableHighAccuracy: true
-    //     }
-    // }
-    
-    // function showPosition(position) {
-    //     note['latitude'] = position.coords.latitude;
-    //     note['longitude'] = position.coords.longitude;
-    // }
-
     // Send data to back4App
     function sendData(){
         const Notes = new Parse.Object("Notes");
@@ -173,7 +153,6 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         Notes.set("longitude", parseFloat(note['longitude']));
         try {
             let result = Notes.save()
-            // alert('New object created with objectId: ' + result.id);
         } catch(error) {
             alert('Failed to save response');
         }
@@ -215,7 +194,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         });
 
         getResponses();
-        listContainer.innerHTML = ""; 
+        listContainer.innerHTML = "";
     }
 
     async function getResponses(){
@@ -280,17 +259,13 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
     });
 
     // Map section of explore page
-    // var map = L.map('map2').setView([57.774929, -123.419418], 5);
-    // var map = L.map('map2').setView([38.5744896, -121.7560576], 13);
-    // 38.5744896 -121.7560576
-    //  17.9454064 11.3885184
-    var map = L.map('map2').setView([56.519896, -133.144576], 10);
+    var map = L.map('map2').setView([38.5744896, -121.7560576], 5);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
-    tileSize: 412,
+    tileSize: 512,
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoidXJ2aWciLCJhIjoiY2t5djVmaThqMDM0MDJ4cWt6azVsbGxlYiJ9.ufsVhVdvxu3bYqGsBAvocw'
     }).addTo(map);
@@ -311,12 +286,12 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         let circle;
         let points = [];
         for (var i = 0; i < circles.length; i++) {
-            circle = new L.circle([circles[i][1] + 17.9454064, circles[i][2] - 11.3885184],{
+            circle = new L.circle([circles[i][1], circles[i][2]],{
                 id: circles[i][3],
                 color: '#FF0000',
                 fillColor: '#FF0000',
                 fillOpacity: 0.5,
-                radius: 1000
+                radius: 1100
             }).addTo(map);
 
             points.push(circle);
