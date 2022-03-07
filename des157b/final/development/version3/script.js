@@ -55,7 +55,6 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         nav.className = 'showing';
         main.className = 'showing';
         elink.style.fontWeight = '600';
-        // displayList();
     });
 
     // Move back to landing page
@@ -119,6 +118,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         for (let eachField of form2) {
             eachField.value = "";
         }
+        document.querySelector('#response').value = "";
         sendData();
 
         for (let category in note) {
@@ -193,8 +193,8 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         gutter: 50
         });
 
-        getResponses();
         listContainer.innerHTML = "";
+        getResponses();
     }
 
     async function getResponses(){
@@ -291,7 +291,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
                 color: '#FF0000',
                 fillColor: '#FF0000',
                 fillOpacity: 0.5,
-                radius: 1100
+                radius: 10000
             }).addTo(map);
 
             points.push(circle);
