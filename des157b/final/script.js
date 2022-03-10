@@ -108,14 +108,9 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
 
     // Sending in a response
     send.addEventListener('click', function(){
-        let form1 = document.querySelectorAll("#firstform input[type=text]");
-        for (let eachField of form1) {
-            eachField.value = "";
-        }
         submitpage.className = 'hidden';
         thankyou.className = 'showing';
         resourcespage.className = 'hidden';
-        document.querySelector('#error').remove();
 
         note['title'] = document.querySelector('#title').value;
         note['response'] = document.querySelector('#response').value;
@@ -159,6 +154,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         Notes.set("longitude", parseFloat(note['longitude']));
         try {
             let result = Notes.save()
+            alert('New object created with objectId: ' + result.id);
         } catch(error) {
             alert('Failed to save response');
         }
