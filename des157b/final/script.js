@@ -154,7 +154,6 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
         Notes.set("longitude", parseFloat(note['longitude']));
         try {
             let result = Notes.save()
-            alert('New object created with objectId: ' + result.id);
         } catch(error) {
             alert('Failed to save response');
         }
